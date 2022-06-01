@@ -1,5 +1,5 @@
 window.onload = function(){
-    loadTest();
+
 }
 
 function loadTest(){
