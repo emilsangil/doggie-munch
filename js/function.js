@@ -5,8 +5,11 @@ function getElement(id)
 
 
 function register(){
-    console.log('clicked')
     let accArray = [];
+
+    if (localStorage.getItem('account'))    {
+        acc = JSON.parse(localStorage.getItem('account')) ;
+    }
 
     accObject = {};
 
@@ -17,10 +20,35 @@ function register(){
 
     localStorage.setItem('account', JSON.stringify(accArray));
 
+    user = document.getElementById('username').value
+    pass = document.getElementById('password').value
+
+    if(!user || !pass){
+        field = document.getElementById('field-id');
+        alertContainer = document.createElement('div');
+        alertContainer.id = 'alert-container'
+        alertDanger = document.createElement('div');
+        alertDanger.id = 'alerts'
+        alertDanger.className = 'alert alert-danger';
+        alertDanger.textContent = 'Username and Password should not be empty or Username already exist'
+        field.prepend(alertContainer);
+        alertContainer.append(alertDanger)
+    }else{
+        field = document.getElementById('field-id');
+        alertContainer = document.createElement('div');
+        alertContainer.id = 'alert-container'
+        alertSuccess = document.createElement('div');
+        alertSuccess.id = 'alerts'
+        alertSuccess.className = 'alert alert-success';
+        alertSuccess.textContent = 'You have successfully register! redirecting to login page'
+        field.prepend(alertContainer);
+        alertContainer.append(alertSuccess)
+        setTimeout(function(){window.location.href = 'login.html'}, 2000);
+    }
+
 }
 
 function login(){
-    console.log('clicked')
     if (localStorage.getItem('account'))    {
         acc = JSON.parse(localStorage.getItem('account')) ;
     }

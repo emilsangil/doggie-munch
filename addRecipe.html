@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/add-recipe.css">
     <link rel="stylesheet" href="css/recipe.css">
+    <script src="js/recipe.js"></script>
     <!--Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,12 +38,39 @@
                 <a class="nav-link" aria-current="page" href="recipe.html">SEARCH RECIPES</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="#">MY RECIPES</a>
+                  </li>
+                <li class="nav-item">
                 <a class="nav-link" href="login.html">LOGIN</a>
                 </li>
             </ul>
             </div>
         </div>
     </nav>
+    <div id="alert-wrapper">
+            <div>
+                <h2>SHARE YOUR RECIPE</h2> 
+            </div>
+            <div>
+                <label class="label" for="recipename">Recipe Name</label>
+                <input type="text" id="recipename" name="recipename" placeholder="Your recipe name..">
+            
+                <label class="label" for="recipedescription">Recipe Description</label>
+                <input type="text" id="recipedescription" name="recipedescription" placeholder="Your recipe description..">
+        
+                <label class="label" for="ingredients">Ingredients</label>
+                <textarea id="ingredients" name="ingredients"></textarea>
+        
+                <label class="label" for="direction">Direction</label>
+                <textarea id="direction" name="direction"></textarea>
+        
+                                
+                <button class="btn-add" onclick="addRecipe()">Add</button>
+                <a href=''>
+                    <button type="button" class="cancelbutton">Cancel</button> 
+                </a>
+            </div>
+    </div>
     
     <footer class="navbar navbar-expand-sm">
         <div class="container-fluid">

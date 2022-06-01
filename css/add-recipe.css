@@ -1,0 +1,84 @@
+input[type=text], select [type=number], [type=password], [type=email], [type=date], [type=url] {
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  
+  .btn-add {
+    min-width: 10%;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    align-self: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    background: #B94300;
+    border-radius: 5px;
+    height: 40px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .cancelbutton {
+    min-width: 10%;
+    color: #B94300;;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    align-self: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-color: #B94300;
+    border-radius: 5px;
+    height: 40px;
+    align-items: center;
+    text-align: center;
+  }
+
+
+  input[type=submit]:hover {
+    background-color: #F77A07;
+  }
+
+  textarea {
+	width: 80%;
+	min-height: 150px;
+    max-height: 900px;
+	padding: 12px 20px;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	resize: vertical;
+    border-radius: 4px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+  div {
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    padding: 20px;
+  }
+
+  .label {
+    font-family: 'Barlow Semi Condensed';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 38px;
+    display: flex;
+    align-items: center;
+    
+    color: #B94300;
+    margin-left: 10%;
+  }
