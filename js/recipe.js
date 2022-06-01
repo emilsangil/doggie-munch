@@ -102,9 +102,7 @@ function addRecipe(){
     // }
 }
 
-function editRecipe(){
-    document.getElementById('recipename').readOnly = false;
-}
+
 
 function view(){
     viewArray = [];
