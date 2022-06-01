@@ -45,13 +45,7 @@ function loadRecipe(){
     })
 }
 
-function loadTest(){
-    accArray = [{
-        "username": "test",
-        "password": "password"
-    }]
-    localStorage.setItem('account', JSON.stringify(accArray));
-}
+
 
 function addRecipe(){
     recipeArray = [];
@@ -77,9 +71,10 @@ function addRecipe(){
     alertDanger = document.createElement('div');
     alertDanger.id = 'alerts'
     alertDanger.className = 'alert alert-success';
-    alertDanger.textContent = 'Recipe has been added!'
+    alertDanger.textContent = 'Recipe has been added! Redirecting to "My Recipes" page'
     field.prepend(alertContainer);
     alertContainer.append(alertDanger)
+    setTimeout(function(){window.location.href = 'myrecipe.html'}, 2000);
 
     // if (document.getElementById("alert-container"))  {
     //     document.getElementById("alert-container").removeChild(document.getElementById("alerts"))

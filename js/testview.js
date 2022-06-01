@@ -13,3 +13,4 @@ function loadTestView(){
         document.getElementById('direction').value = rec.direction;
     })
 }
+
