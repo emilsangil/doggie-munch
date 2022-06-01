@@ -1,6 +1,5 @@
 window.onload = function(){
     loadRecipe();
-    console.log('Recipe loaded')
 }
 
 function loadRecipe(){
@@ -11,6 +10,7 @@ function loadRecipe(){
     cardContainer = document.getElementById('card-container');
     cardDiv = document.createElement('div');
     cardDiv.className = 'card';
+    cardDiv.id = 'card';
     cardContainer.append(cardDiv);
     cardBox = document.createElement('div');
     cardDiv.append(cardBox);
@@ -22,9 +22,11 @@ function loadRecipe(){
     cardDiv.append(cardContent);
     cardHeader = document.createElement('span');
     cardHeader.className = 'card-header';
+    cardHeader.id = 'recipes-header';
     cardContent.append(cardHeader);
     cardDesc = document.createElement('span');
-    cardDesc.className = 'card-desc'
+    cardDesc.className = 'card-desc';
+    cardDesc.id = 'recipe-desc';
     cardContent.append(cardDesc);
     cardLink = document.createElement('div');
     cardLink.className = 'link'
@@ -32,6 +34,9 @@ function loadRecipe(){
     cardA = document.createElement('a')
     cardA.href = 'viewRecipe.html';
     cardA.innerText = 'View Recipe';
+    cardA.onclick = function(){
+        view();
+    }
     cardContent.append(cardA);
 
     recipes.forEach(recipe => {
@@ -40,9 +45,15 @@ function loadRecipe(){
     })
 }
 
-function addRecipe(){
-    console.log('clicked');
+function loadTest(){
+    accArray = [{
+        "username": "test",
+        "password": "password"
+    }]
+    localStorage.setItem('account', JSON.stringify(accArray));
+}
 
+function addRecipe(){
     recipeArray = [];
 
     recipeObject = {};
@@ -94,6 +105,85 @@ function addRecipe(){
     //     field.prepend(alertContainer);
     //     alertContainer.append(alertSuccess)
     // }
+}
+
+function view(){
+    viewArray = [];
+
+    viewObject = {};
+
+    recipes = document.querySelectorAll('#card')
+
+    recipes.forEach(recipe => {
+        console.log(recipe)
+    })
+
+    recipeName = document.getElementById('recipe-name').value;
+    recipeDesc = document.getElementById('recipe-desc').value;
+
+    viewObject.recipename = recipeName;
+    viewObject.recipedesc = recipeDesc;
+
+    viewArray.push(viewObject);
+
+    localStorage.setItem('view', JSON.stringify(viewArray));
 
 }
 
+function search(){
+    searchValue = document.getElementById('search').value;
+
+    if(document.getElementById('card')){
+        searchResults = document.getElementById('card').removeChild(document.getElementById('card-box'), lastChild);
+    }
+
+    if(localStorage.getItem('view')){
+        viewArray = JSON.parse(localStorage.getItem('view'));
+
+        viewArray2 = document.querySelectorAll('.card-header');
+
+        
+
+        viewArray2.forEach(card => {
+
+        if(card.innerText.includes(searchValue)){
+            cardContainer = document.getElementById('card-container');
+            cardDiv = document.createElement('div');d
+            cardDiv.className = 'card';
+            cardDiv.id = 'card';
+            cardContainer.append(cardDiv);
+            cardBox = document.createElement('div');
+            cardBox.id = '6';
+            cardDiv.append(cardBox);
+            cardImg = document.createElement('img');
+            cardImg.src = 'images/recipes.jpg';
+            cardBox.append(cardImg);
+            cardContent = document.createElement('div');
+            cardContent.className = 'cardContent';
+            cardDiv.append(cardContent);
+            cardHeader = document.createElement('span');
+            cardHeader.className = 'card-header';
+            cardHeader.id = 'recipes-header';
+            cardContent.append(cardHeader);
+            cardDesc = document.createElement('span');
+            cardDesc.className = 'card-desc';
+            cardDesc.id = 'recipe-desc';
+            cardContent.append(cardDesc);
+            cardLink = document.createElement('div');
+            cardLink.className = 'link'
+            cardContent.append(cardLink);
+            cardA = document.createElement('a')
+            cardA.href = 'viewRecipe.html';
+            cardA.innerText = 'View Recipe';
+            cardA.onclick = function(){
+                view();
+            }
+            cardContent.append(cardA);
+        }
+
+            console.log(card.innerText)
+            cardHeader.innerText = card.innerText
+            cardDesc.innerText = card.recipedescription
+        })
+    }
+}

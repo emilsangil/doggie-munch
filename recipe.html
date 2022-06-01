@@ -54,50 +54,50 @@
     </nav>
     <div class="card-wrapper">
         <div class="container">
-            <input type="search" id="search" class="search" placeholder="Find a pawfect recipe" data-search>
+            <input type="search" id="search" class="search" placeholder="Find a pawfect recipe" onkeyup="search()">
         </div>
         <!-- <div class="card-deck" id="card-deck">
         </div> -->
-        <main>
+        <main id="card-wrap">
             <div class="card-container" id="card-container">
-                <div class="card featured">
-                    <div class="box"><img src="/images/recipes.jpg"></div>
-                    <div class="card-content">
-                        <span class="card-header">Recipe name</span>
-                        <span class="card-desc">Recipe short description goes here.</span>
-                        <div class="link"><a href="viewRecipe.html">View Recipe</a></div>
+                <div class="card featured" id="card">
+                    <div class="box" ><img src="/images/recipes.jpg"></div>
+                    <div class="card-content" id="1">
+                        <span class="card-header" id="recipe-name">Recipe name</span>
+                        <span class="card-desc" id="recipe-desc">Recipe short description goes here.</span>
+                        <div class="link"><a href="viewRecipe.html" onclick="view()">View Recipe</a></div>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" id="card">
                     <div class="box"><img src="/images/recipes.jpg"></div>
-                    <div class="card-content">
-                        <span class="card-header">recipe name</span>
-                        <span class="card-desc">recipe short description goes here.</span>
-                        <div class="link"><a href="viewRecipe.html">View Recipe</a></div>
+                    <div class="card-content" id="2" >
+                        <span class="card-header" id="recipe-name">recipe name</span>
+                        <span class="card-desc" id="recipe-desc">recipe short description goes here.</span>
+                        <div class="link"><a href="viewRecipe.html" onclick="view()">View Recipe</a></div>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" id="card">
                     <div class="box"><img src="/images/recipes.jpg"></div>
-                    <div class="card-content">
-                        <span class="card-header">recipe name</span>
-                        <span class="card-desc">recipe short description goes here.</span>
-                        <div class="link"><a href="viewRecipe.html">View Recipe</a></div>
+                    <div class="card-content" id="3">
+                        <span class="card-header" id="recipe-name">recipe name</span>
+                        <span class="card-desc" id="recipe-desc">recipe short description goes here.</span>
+                        <div class="link"><a href="viewRecipe.html" onclick="view()">View Recipe</a></div>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" id="card">
                     <div class="box"><img src="/images/recipes.jpg"></div>
-                    <div class="card-content">
-                        <span class="card-header">recipe name</span>
-                        <span class="card-desc">recipe short description goes here.</span>
-                        <div class="link"><a href="viewRecipe.html">View Recipe</a></div>
+                    <div class="card-content" id="4">
+                        <span class="card-header" id="recipe-name">recipe name</span>
+                        <span class="card-desc" id="recipe-desc">recipe short description goes here.</span>
+                        <div class="link"><a href="viewRecipe.html" onclick="view()">View Recipe</a></div>
                     </div>
                 </div>
-                <div class="card">
-                    <div class="box"><img src="/images/recipes.jpg"></div>
-                    <div class="card-content">
-                        <span class="card-header">recipe name</span>
-                        <span class="card-desc">recipe short description goes here.</span>
-                        <div class="link"><a href="viewRecipe.html">View Recipe</a></div>
+                <div class="card" id="card">
+                    <div class="box" ><img src="/images/recipes.jpg"></div>
+                    <div class="card-content" id="5">
+                        <span class="card-header" id="recipe-name">recipe name</span>
+                        <span class="card-desc" id="recipe-desc">recipe short description goes here.</span>
+                        <div class="link"><a href="viewRecipe.html" onclick="view()">View Recipe</a></div>
                     </div>
                 </div>
             </div>
