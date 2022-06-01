@@ -42,7 +42,7 @@ function login(){
             alertSuccess.textContent = 'You have successfully login!'
             field.prepend(alertContainer);
             alertContainer.append(alertSuccess)
-            setTimeout(function(){window.location.href = 'index.html'}, 2000); 
+            setTimeout(function(){window.location.href = 'index.html'}, 2000);
         }
         else{
             field = document.getElementById('field-id');
