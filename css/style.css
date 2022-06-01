@@ -1,0 +1,111 @@
+header{
+    background-color: #F77A07;
+}
+
+footer{
+    margin-top: 20px;
+    background-color: #F79807;
+}
+
+nav{
+    background-color: #FEF4EA;
+}
+
+.nav-link{
+    color: #904901;
+    font-size: 40px;
+}
+
+.img-logo{
+    width:600px;
+    height: 600px;
+    flex-basis: 800px;
+}
+
+.container1{
+    background-color: #FEF4EA;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+}
+
+.text1{
+    font-family: 'Barlow Semi Condensed';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    color: #904901;
+}
+.text2{
+    font-family: 'Barlow Semi Condensed';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 77px;
+    text-align: center;
+    color: #B94300;
+}
+
+.text-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.btn{
+    background: #F77A07;
+    border-radius: 20px;
+    color: #ffffff;
+}
+
+.btn-text{
+    align-self: center;
+}
+
+.card{
+    width: 286px;
+}
+.card-link{
+    text-align: center;
+    background-color: #F77A07;
+}
+
+.card-deck{
+    display: flex;
+    justify-content:space-around;
+    flex-wrap: wrap;
+}
+
+.card-img-top{
+    margin-top: 20px;;
+    width: 286px;
+    height: 300px;
+    background-color: #FEF4EA;
+}
+
+.btn-card{
+    margin-top: 20px;
+    background: #F77A07;
+    border-radius: 5px;
+    font-family: 'Barlow Semi Condensed';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 48px;
+    align-items: center;
+    text-align: center;
+}
+
+.btn-login{
+    text-align: right;
+}
+
+
+
+@media only screen and (max-width: 652px){
+    body{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+}

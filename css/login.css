@@ -1,0 +1,79 @@
+.fieldsetborderless { 
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 50px;
+    margin-bottom: 10%;
+    font-family:'Roboto',sans-serif;
+    border-radius:.5em;
+    border-style: none;
+}
+.fieldsettitle{ 
+    font-size: 50px;
+    font-family:'Roboto',sans-serif;
+	font-weight: 500;
+	font-weight: bold;
+	color:#F77A07;
+	letter-spacing: 2px;
+	text-decoration:none;
+	text-align: center;
+	margin-bottom: auto;
+}
+.p-fieldset {
+    font-size: 15px;
+    font-family:'Roboto',sans-serif;
+	font-weight: 500;
+	font-weight: bold;
+	color:#353333;
+	letter-spacing: 2px;
+	text-decoration:none;
+	text-align: center;
+    margin-top: 40px;
+	margin-bottom: 20px;
+}
+
+input[type=text], select, [type=number], [type=password], [type=username], [type=date], [type=url] {
+	width: 40%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 15px;
+	box-sizing: border-box;
+	background-color: white;
+	margin-top: 40px;
+	margin-left: 25%;
+	/* margin-right: 40px; */
+    margin-bottom: 20px;
+	border: none;
+}
+
+.buttonlogin {
+	min-width: 160px;
+	height: 45px;
+	padding:.2em;
+	top: 5px;
+	box-sizing: border-box;
+	text-decoration:none;
+	font-family:'Inter',sans-serif;
+	font-size: 20px;
+	font-weight: 500;
+	font-weight: bold;
+	color:#FFFFFF;
+	text-align:center;
+	letter-spacing: 2px;
+	float: center;
+	border-style: none;
+	cursor: pointer;
+	background-color: #F77A07;
+	border-radius: 50px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	margin-left: 25%; 
+	margin-right: 40px;
+  }
+
+.btn-wrapper{
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+}
