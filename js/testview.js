@@ -14,3 +14,10 @@ function loadTestView(){
     })
 }
 
+function editRecipe(){
+    document.getElementById('recipename').readOnly = false;
+    document.getElementById('recipedescription').readOnly = false;
+    document.getElementById('ingredients').readOnly = false;
+    document.getElementById('direction').readOnly = false;
+}
+

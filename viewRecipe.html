@@ -53,25 +53,31 @@
             </div>
         </div>
     </nav>
-    <div id="alert-wrapper">
+    <div id="alert-wrapper" class="alert-wrapper">
         <div>
             <h2>VIEW YOUR RECIPE</h2>
         </div>
+          <div class="banner">
+            <div>
+                <br></br>
+                <img src="/images/Recipes.jpg" id="viewRecipe">
+            </div>
+        </div>
         <div>
             <label class="label" for="recipename">Recipe Name</label>
-            <input type="text" id="recipename" name="recipename" placeholder="Your recipe name..">
+            <input type="text" id="recipename" name="recipename" placeholder="Your recipe name.." readonly="true">
 
             <label class="label" for="recipedescription">Recipe Description</label>
-            <input type="text" id="recipedescription" name="recipedescription" placeholder="Your recipe description..">
+            <input type="text" id="recipedescription" name="recipedescription" placeholder="Your recipe description.." readonly="true">
 
             <label class="label" for="ingredients">Ingredients</label>
-            <textarea id="ingredients" name="ingredients"></textarea>
+            <textarea id="ingredients" name="ingredients" readonly="true"></textarea>
 
             <label class="label" for="direction">Direction</label>
-            <textarea id="direction" name="direction"></textarea>
+            <textarea id="direction" name="direction" readonly="true"></textarea>
 
 
-            <button class="btn-add" onclick="addRecipe()">Edit</button>
+            <button class="btn-add" onclick="editRecipe()">Edit</button>
             <a href=''>
                 <button type="button" class="cancelbutton">Delete</button>
             </a>
